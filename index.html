@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Pacific Dental Clinic & Implant Centre – Professional dental care, implants, and oral health services in Uttara, Dhaka, Bangladesh." />
+  <meta name="keywords" content="dental clinic, implant centre, dentist Dhaka, Pacific Dental, teeth, oral health, Uttara" />
+  <title>Pacific Dental Clinic & Implant Centre | Uttara, Dhaka</title>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+
+  <!-- ═══════════ PAGE LOADER ═══════════ -->
+  <div id="page-loader" class="page-loader">
+    <div class="loader-inner">
+      <svg class="loader-tooth" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+        <path class="tooth-path" d="M40 8 C28 8 20 15 18 24 C16 32 17 40 20 48 C22 54 24 62 24 68 C24 72 26 74 28 74 C30 74 31 72 32 68 C33 62 36 58 40 58 C44 58 47 62 48 68 C49 72 50 74 52 74 C54 74 56 72 56 68 C56 62 58 54 60 48 C63 40 64 32 62 24 C60 15 52 8 40 8 Z"/>
+      </svg>
+      <p class="loader-text">Pacific Dental</p>
+    </div>
+  </div>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+
+      <!-- Logo + Brand -->
+      <a href="#home" class="nav-brand" id="logo-link" aria-label="Pacific Dental Clinic Home">
+        <div class="logo-wrap">
+          <svg class="tooth-logo" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <!-- Outer glow circle -->
+            <circle cx="30" cy="30" r="28" class="logo-circle"/>
+            <!-- Tooth shape -->
+            <path class="logo-tooth" d="M30 10 C22 10 16 16 15 23 C14 29 15 35 17 41 C18.5 45.5 19.5 51 19.5 55 C19.5 57 20.5 58 22 58 C23.5 58 24.2 56.5 24.8 53.5 C25.5 49.5 27.5 47 30 47 C32.5 47 34.5 49.5 35.2 53.5 C35.8 56.5 36.5 58 38 58 C39.5 58 40.5 57 40.5 55 C40.5 51 41.5 45.5 43 41 C45 35 46 29 45 23 C44 16 38 10 30 10 Z"/>
+            <!-- Shine dots -->
+            <circle cx="23" cy="20" r="1.5" class="logo-shine"/>
+            <circle cx="28" cy="16" r="1" class="logo-shine"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">Pacific Dental</span>
+          <span class="brand-sub">Clinic & Implant Centre</span>
+        </div>
+      </a>
+
+      <!-- Hamburger (mobile) -->
+      <button class="hamburger" id="hamburger-btn" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <!-- Nav Links -->
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+        <li><a href="#about" class="nav-link" id="nav-about">About Us</a></li>
+        <li><a href="#services" class="nav-link" id="nav-services">Services</a></li>
+        <li><a href="#location" class="nav-link" id="nav-location">Location</a></li>
+        <li>
+          <button class="btn-book-nav" id="book-now-btn" aria-label="Open booking form">
+            <i class="fa-regular fa-calendar-check"></i> Book Now
+          </button>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-overlay" id="nav-overlay"></div>
+
+  <!-- ═══════════ HERO SECTION ═══════════ -->
+  <section id="home" class="hero-section">
+    <div class="hero-bg-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-badge"><i class="fa-solid fa-shield-heart"></i> Trusted Dental Care Since 2006</span>
+        <h1 class="hero-title">Your Smile,<br><span class="highlight">Our Passion</span></h1>
+        <p class="hero-desc">
+          Experience world-class dental care at Pacific Dental Clinic & Implant Centre.
+          Advanced treatments, compassionate care — all under one roof in Uttara, Dhaka.
+        </p>
+        <div class="hero-cta">
+          <button class="btn-primary" id="hero-book-btn">
+            <i class="fa-regular fa-calendar-check"></i> Book Appointment
+          </button>
+          <a href="#services" class="btn-outline">
+            <i class="fa-solid fa-tooth"></i> Our Services
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">18+</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">10k+</span>
+            <span class="stat-label">Happy Patients</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Care & Comfort</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card-wrap">
+          <div class="hero-card">
+            <div class="hero-tooth-anim">
+              <svg viewBox="0 0 120 150" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                  <linearGradient id="toothGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#e8f4fd;stop-opacity:1" />
+                  </linearGradient>
+                  <linearGradient id="shineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8" />
+                    <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+                  </linearGradient>
+                </defs>
+                <path d="M60 5 C40 5 26 16 23 29 C20 41 22 55 25 66 C27 74 29 86 29 96 C29 102 32 106 36 106 C40 106 42 102 43 96 C44.5 88 51 83 60 83 C69 83 75.5 88 77 96 C78 102 80 106 84 106 C88 106 91 102 91 96 C91 86 93 74 95 66 C98 55 100 41 97 29 C94 16 80 5 60 5 Z" fill="url(#toothGrad)" stroke="#d0e8f5" stroke-width="2"/>
+                <path d="M35 22 C35 22 42 18 55 18" stroke="url(#shineGrad)" stroke-width="4" stroke-linecap="round" fill="none"/>
+                <circle cx="42" cy="28" r="3" fill="white" opacity="0.9"/>
+              </svg>
+            </div>
+            <div class="floating-badge fb-1">
+              <i class="fa-solid fa-star"></i> 5-Star Care
+            </div>
+            <div class="floating-badge fb-2">
+              <i class="fa-solid fa-user-doctor"></i> Expert Doctors
+            </div>
+            <div class="floating-badge fb-3">
+              <i class="fa-solid fa-shield-heart"></i> Safe & Hygienic
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll Down</span>
+      <div class="scroll-arrow"><i class="fa-solid fa-chevron-down"></i></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ABOUT SECTION ═══════════ -->
+  <section id="about" class="about-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">About Us</span>
+        <h2 class="section-title">Why Choose<br><span class="highlight">Pacific Dental?</span></h2>
+        <p class="section-desc">We combine cutting-edge technology with heartfelt patient care to deliver outstanding dental outcomes.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card reveal">
+          <div class="about-icon"><i class="fa-solid fa-user-doctor"></i></div>
+          <h3>Expert Specialists</h3>
+          <p>Led by Prof. Dr. Md. Shahidul Islam Shaheen (BDS, MS, FDS RCPSGlasg, PhD), our team brings international expertise to every patient.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-icon"><i class="fa-solid fa-microscope"></i></div>
+          <h3>Advanced Technology</h3>
+          <p>State-of-the-art equipment including digital X-rays, 3D imaging, and laser dentistry for precise, painless treatments.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+          <h3>Patient-Centered Care</h3>
+          <p>Every treatment plan is tailored to your individual needs. We prioritize comfort, safety, and long-lasting results.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="about-icon"><i class="fa-solid fa-certificate"></i></div>
+          <h3>Internationally Certified</h3>
+          <p>Affiliated with global dental institutions, ensuring our standards meet and exceed international benchmarks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SERVICES SECTION ═══════════ -->
+  <section id="services" class="services-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Our Services</span>
+        <h2 class="section-title">Complete <span class="highlight">Dental Solutions</span></h2>
+        <p class="section-desc">From routine check-ups to complex implant surgeries — we cover every aspect of your oral health.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card reveal">
+          <div class="service-icon-wrap">
+            <i class="fa-solid fa-tooth"></i>
+          </div>
+          <h3>Dental Implants</h3>
+          <p>Permanent, natural-looking tooth replacement using titanium implants with high success rates.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon-wrap">
+            <i class="fa-solid fa-teeth-open"></i>
+          </div>
+          <h3>Teeth Whitening</h3>
+          <p>Professional whitening treatments that brighten your smile by several shades safely and effectively.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon-wrap">
+            <i class="fa-solid fa-teeth"></i>
+          </div>
+          <h3>Orthodontics & Braces</h3>
+          <p>Metal, ceramic, and invisible aligners to straighten teeth and correct bite issues at any age.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon-wrap">
+            <i class="fa-solid fa-syringe"></i>
+          </div>
+          <h3>Root Canal Treatment</h3>
+          <p>Pain-free root canal therapy using modern techniques to save infected or damaged teeth.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon-wrap">
+            <i class="fa-solid fa-stethoscope"></i>
+          </div>
+          <h3>Oral Surgery</h3>
+          <p>Expert surgical care including wisdom tooth extraction, jaw surgery, and complex restorations.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon-wrap">
+            <i class="fa-solid fa-child-reaching"></i>
+          </div>
+          <h3>Pediatric Dentistry</h3>
+          <p>Child-friendly dental care in a warm, welcoming environment — making dentistry fun for kids.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ LOCATION SECTION ═══════════ -->
+  <section id="location" class="location-section">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Find Us</span>
+        <h2 class="section-title">Our <span class="highlight">Location</span></h2>
+        <p class="section-desc">Conveniently located in Uttara, Dhaka — easy to reach from all parts of the city.</p>
+      </div>
+      <div class="location-grid">
+        <div class="location-info reveal">
+          <div class="location-detail">
+            <div class="loc-icon"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="loc-text">
+              <h4>Address</h4>
+              <p>Rashid Court (Level# 4, Above LeReVe)<br>
+                House# 04, Road# 07<br>
+                (Near to Rajlaxmi Complex)<br>
+                Sector # 03, Uttara<br>
+                Dhaka-1230, Bangladesh</p>
+              <a
+                href="https://www.google.com/maps/dir/23.8661044,90.4166511/Pacific+Dental+Clinic+%26+Implant+Centre,+Rashid+Court,+House+4+Rd+No.+7%2FC,+Dhaka+1230/@23.8638856,90.3986466,17.86z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3755c5783f9a97e5:0x69a0516a36655785!2m2!1d90.3984228!2d23.8645547?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn-direction"
+                id="direction-btn"
+              >
+                <i class="fa-solid fa-diamond-turn-right"></i> Click for Direction
+              </a>
+            </div>
+          </div>
+          <div class="location-detail">
+            <div class="loc-icon"><i class="fa-solid fa-phone"></i></div>
+            <div class="loc-text">
+              <h4>Phone / WhatsApp</h4>
+              <a href="tel:+8801819114508">+880 1819-114508</a>
+            </div>
+          </div>
+          <div class="location-detail">
+            <div class="loc-icon"><i class="fa-solid fa-envelope"></i></div>
+            <div class="loc-text">
+              <h4>Email</h4>
+              <a href="mailto:pacificdental2006@gmail.com">pacificdental2006@gmail.com</a>
+            </div>
+          </div>
+          <div class="location-detail">
+            <div class="loc-icon"><i class="fa-regular fa-clock"></i></div>
+            <div class="loc-text">
+              <h4>Working Hours</h4>
+              <p>Sat – Thu: 9:00 AM – 8:00 PM<br>Friday: Closed</p>
+            </div>
+          </div>
+        </div>
+        <div class="map-container reveal">
+          <iframe
+            title="Pacific Dental Clinic Location"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d912.5!2d90.3984228!3d23.8645547!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c5783f9a97e5%3A0x69a0516a36655785!2sPacific%20Dental%20Clinic%20%26%20Implant%20Centre!5e0!3m2!1sen!2sbd!4v1700000000000!5m2!1sen!2sbd"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-container">
+        <!-- Brand column -->
+        <div class="footer-col footer-brand-col">
+          <a href="index.html">
+          <div class="footer-logo">
+            <svg class="footer-tooth-svg" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="30" cy="30" r="28" class="footer-logo-circle"/>
+              <path class="footer-logo-tooth" d="M30 10 C22 10 16 16 15 23 C14 29 15 35 17 41 C18.5 45.5 19.5 51 19.5 55 C19.5 57 20.5 58 22 58 C23.5 58 24.2 56.5 24.8 53.5 C25.5 49.5 27.5 47 30 47 C32.5 47 34.5 49.5 35.2 53.5 C35.8 56.5 36.5 58 38 58 C39.5 58 40.5 57 40.5 55 C40.5 51 41.5 45.5 43 41 C45 35 46 29 45 23 C44 16 38 10 30 10 Z"/>
+            </svg>
+            <div>
+              <span class="footer-brand-name">Pacific Dental</span>
+              <span class="footer-brand-sub">Clinic & Implant Centre</span>
+            </div>
+          </div>
+          </a>
+          <p class="footer-about-text">
+            Your smile is our mission. We provide exceptional dental care with compassion, expertise, and the latest technology since 2006.
+          </p>
+          <div class="footer-socials">
+            <a href="https://www.facebook.com/pacific.dental.implant.centre/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Facebook" id="footer-facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="https://linkedin.com/in/prof-dr-md-shahidul-islam-shaheen-bds-ms-fds-rcps-glasg-phd-fellow-01828929/" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn" id="footer-linkedin">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://wa.me/8801819114508" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="WhatsApp" id="footer-whatsapp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a href="mailto:pacificdental2006@gmail.com" class="social-btn" aria-label="Email" id="footer-email">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home"><i class="fa-solid fa-chevron-right"></i> Home</a></li>
+            <li><a href="#about"><i class="fa-solid fa-chevron-right"></i> About Us</a></li>
+            <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Services</a></li>
+            <li><a href="#location"><i class="fa-solid fa-chevron-right"></i> Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Our Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Dental Implants</a></li>
+            <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Teeth Whitening</a></li>
+            <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Orthodontics</a></li>
+            <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Root Canal</a></li>
+            <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Oral Surgery</a></li>
+            <li><a href="#services"><i class="fa-solid fa-chevron-right"></i> Pediatric Dentistry</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact Us</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Rashid Court (Level# 4, Above LeReVe), House# 04, Road# 07, Sector# 03, Uttara, Dhaka-1230</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <a href="tel:+8801819114508">+880 1819-114508</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:pacificdental2006@gmail.com">pacificdental2006@gmail.com</a>
+            </li>
+          </ul>
+          <a
+            href="https://www.google.com/maps/dir/23.8661044,90.4166511/Pacific+Dental+Clinic+%26+Implant+Centre,+Rashid+Court,+House+4+Rd+No.+7%2FC,+Dhaka+1230/@23.8638856,90.3986466,17.86z/data=!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3755c5783f9a97e5:0x69a0516a36655785!2m2!1d90.3984228!2d23.8645547?entry=ttu&g_ep=EgoyMDI2MDQxNS4wIKXMDSoASAFQAw%3D%3D"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-direction footer-direction-btn"
+            id="footer-direction-btn"
+          >
+            <i class="fa-solid fa-diamond-turn-right"></i> Get Directions
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-container footer-bottom-inner">
+        <p>&copy; <span id="current-year"></span> Pacific Dental Clinic & Implant Centre. All rights reserved.</p>
+        <p>Designed with <i class="fa-solid fa-heart" style="color:#e05a7c;"></i> for your smile.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════ BOOKING MODAL ═══════════ -->
+  <div class="modal-backdrop" id="modal-backdrop" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-box">
+      <button class="modal-close" id="modal-close" aria-label="Close booking form">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="modal-header">
+        <div class="modal-icon">
+          <i class="fa-regular fa-calendar-check"></i>
+        </div>
+        <h2 id="modal-title">Book Your Appointment</h2>
+        <p class="modal-notice">
+          <i class="fa-solid fa-circle-info"></i>
+          We will contact you to confirm the booking.
+        </p>
+      </div>
+      <form id="booking-form" class="booking-form" novalidate>
+        <div class="form-group">
+          <label for="patient-name">Full Name <span class="required">*</span></label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-user input-icon"></i>
+            <input type="text" id="patient-name" name="patient-name" placeholder="Enter your full name" required autocomplete="name" />
+          </div>
+          <span class="field-error" id="name-error">Please enter your name.</span>
+        </div>
+        <div class="form-group">
+          <label for="patient-phone">Phone / WhatsApp <span class="required">*</span></label>
+          <div class="input-wrap">
+            <i class="fa-solid fa-phone input-icon"></i>
+            <input type="tel" id="patient-phone" name="patient-phone" placeholder="+880 XXXX-XXXXXX" required autocomplete="tel" />
+          </div>
+          <span class="field-error" id="phone-error">Please enter a valid phone number.</span>
+        </div>
+        <div class="form-group">
+          <label for="patient-problem">Describe Your Problem <span class="required">*</span></label>
+          <div class="input-wrap textarea-wrap">
+            <i class="fa-solid fa-comment-medical input-icon textarea-icon"></i>
+            <textarea id="patient-problem" name="patient-problem" rows="4" placeholder="Tell us about your dental concern…" required></textarea>
+          </div>
+          <span class="field-error" id="problem-error">Please describe your problem.</span>
+        </div>
+        <button type="submit" class="btn-submit" id="submit-booking">
+          <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
