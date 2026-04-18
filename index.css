@@ -1160,6 +1160,74 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   box-shadow: 0 0 0 3px rgba(224,82,107,0.1);
 }
 
+/* Form row (date + time side by side) */
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Date & time input – remove default system arrows */
+input[type="date"],
+input[type="time"] {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  color: var(--text-dark);
+}
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  opacity: 0.6;
+  cursor: pointer;
+  filter: invert(28%) sepia(60%) saturate(600%) hue-rotate(190deg);
+  transition: opacity var(--transition);
+}
+input[type="date"]::-webkit-calendar-picker-indicator:hover,
+input[type="time"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+/* Form success panel */
+.form-success {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  padding: 20px 16px;
+  background: linear-gradient(135deg, #eafff6, #d4f5e9);
+  border: 1.5px solid #6edeb0;
+  border-radius: var(--radius-md);
+  animation: successPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
+}
+.form-success.visible { display: flex; }
+.success-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #25d366, #128C7E);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(37,211,102,0.35);
+}
+.form-success h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #0d6b42;
+}
+.form-success p {
+  font-size: 0.88rem;
+  color: #1a7a50;
+  line-height: 1.55;
+}
+@keyframes successPop {
+  from { opacity: 0; transform: scale(0.8) translateY(12px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
 .btn-submit {
   display: flex;
   align-items: center;
@@ -1167,23 +1235,176 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 10px;
   width: 100%;
   padding: 14px;
-  background: linear-gradient(135deg, #25d366, #128C7E);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
   color: var(--white);
   font-size: 1rem;
   font-weight: 700;
   border-radius: 50px;
   border: none;
   cursor: pointer;
-  box-shadow: 0 6px 24px rgba(37,211,102,0.35);
-  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 6px 24px rgba(26,111,196,0.35);
+  transition: transform var(--transition), box-shadow var(--transition), background 0.4s ease;
   margin-top: 6px;
 }
 .btn-submit:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px rgba(37,211,102,0.45);
+  box-shadow: 0 10px 30px rgba(26,111,196,0.45);
 }
 .btn-submit:active { transform: translateY(0); }
-.btn-submit i { font-size: 1.2rem; }
+.btn-submit i { font-size: 1.1rem; }
+
+/* ═══════════════════════════════════════════
+   PHONE & EMAIL ICON ANIMATIONS
+═══════════════════════════════════════════ */
+
+/* ── Location section phone icon ── */
+.loc-phone-icon {
+  position: relative;
+  overflow: visible !important;
+  transition: transform var(--transition), background var(--transition), box-shadow var(--transition);
+}
+.loc-phone-icon i {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.15s ease;
+}
+
+/* Ripple rings */
+.loc-phone-icon .ripple {
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  border: 2px solid var(--primary-light);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.phone-contact:hover .loc-phone-icon {
+  background: linear-gradient(135deg, #ff6b35, #f83b5c) !important;
+  box-shadow: 0 0 0 0 rgba(248,59,92,0.4), 0 6px 20px rgba(248,59,92,0.3) !important;
+  animation: phoneRing 0.65s ease-in-out;
+}
+.phone-contact:hover .loc-phone-icon i {
+  animation: phoneVibrate 0.65s ease-in-out;
+}
+.phone-contact:hover .loc-phone-icon .ripple {
+  animation: phoneRippleOut 1.2s ease-out infinite;
+}
+.phone-contact:hover .loc-phone-icon .ripple-2 {
+  animation: phoneRippleOut 1.2s ease-out 0.4s infinite;
+}
+
+@keyframes phoneVibrate {
+  0%   { transform: rotate(0deg)   scale(1); }
+  10%  { transform: rotate(-20deg) scale(1.15); }
+  25%  { transform: rotate(18deg)  scale(1.15); }
+  40%  { transform: rotate(-14deg) scale(1.1); }
+  55%  { transform: rotate(12deg)  scale(1.05); }
+  70%  { transform: rotate(-6deg)  scale(1.02); }
+  85%  { transform: rotate(4deg)   scale(1.01); }
+  100% { transform: rotate(0deg)   scale(1); }
+}
+@keyframes phoneRing {
+  0%   { transform: scale(1); }
+  20%  { transform: scale(1.12); }
+  50%  { transform: scale(1.08); }
+  80%  { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+@keyframes phoneRippleOut {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+/* ── Location section email icon ── */
+.loc-email-icon {
+  position: relative;
+  overflow: visible !important;
+  transition: transform var(--transition), background var(--transition), box-shadow var(--transition);
+}
+.loc-email-icon i {
+  position: relative;
+  z-index: 2;
+  transition: transform 0.15s ease;
+}
+.loc-email-icon .mail-flap {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  opacity: 0;
+  background: rgba(255,255,255,0.2);
+  transition: opacity 0.25s;
+}
+
+.email-contact:hover .loc-email-icon {
+  background: linear-gradient(135deg, #7c3aed, #a855f7) !important;
+  box-shadow: 0 0 20px rgba(124,58,237,0.45), 0 6px 20px rgba(124,58,237,0.3) !important;
+}
+.email-contact:hover .loc-email-icon i {
+  animation: emailFly 0.7s cubic-bezier(0.23,1,0.32,1) both;
+}
+.email-contact:hover .loc-email-icon .mail-flap {
+  animation: mailFlapOpen 0.4s ease forwards;
+}
+
+@keyframes emailFly {
+  0%   { transform: translateX(0)  translateY(0)  rotate(0deg)   scale(1); }
+  25%  { transform: translateX(3px) translateY(-7px) rotate(12deg) scale(1.2); }
+  50%  { transform: translateX(-2px) translateY(-5px) rotate(-6deg) scale(1.15); }
+  75%  { transform: translateX(2px) translateY(-2px) rotate(4deg)  scale(1.08); }
+  100% { transform: translateX(0)  translateY(0)  rotate(0deg)   scale(1); }
+}
+@keyframes mailFlapOpen {
+  0%   { opacity: 0; clip-path: polygon(0 50%, 50% 0, 100% 50%, 100% 0, 0 0); }
+  100% { opacity: 0.35; clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 100%, 0 100%); }
+}
+
+/* ── Footer phone icon ── */
+.footer-icon-wrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  position: relative;
+  transition: background var(--transition), transform var(--transition);
+}
+.footer-icon-wrap i {
+  font-size: 0.88rem;
+  color: var(--accent);
+  display: block;
+  transition: color var(--transition), transform 0.15s ease;
+}
+.footer-contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.87rem;
+  color: rgba(255,255,255,0.55);
+}
+
+/* Footer phone hover */
+.footer-phone-item:hover .footer-phone-wrap {
+  background: rgba(248,59,92,0.2);
+  transform: scale(1.1);
+}
+.footer-phone-item:hover .footer-phone-wrap i {
+  color: #ff6b7a;
+  animation: phoneVibrate 0.65s ease-in-out;
+}
+
+/* Footer email hover */
+.footer-email-item:hover .footer-email-wrap {
+  background: rgba(124,58,237,0.2);
+  transform: scale(1.1);
+}
+.footer-email-item:hover .footer-email-wrap i {
+  color: #c084fc;
+  animation: emailFly 0.7s cubic-bezier(0.23,1,0.32,1) both;
+}
 
 /* ═══════════════════════════════════════════
    ANIMATIONS
@@ -1299,6 +1520,13 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
   .modal-box { padding: 28px 20px 24px; }
   .modal-header h2 { font-size: 1.25rem; }
+
+  /* Stack date + time vertically on small screens */
+  .form-row { grid-template-columns: 1fr; gap: 18px; }
+
+  /* Align footer contact icons to top */
+  .footer-contact-list li { align-items: flex-start; }
+  .footer-icon-wrap { margin-top: 2px; }
 
   .hero-cta { flex-direction: column; align-items: center; }
   .btn-primary, .btn-outline { width: 100%; justify-content: center; }

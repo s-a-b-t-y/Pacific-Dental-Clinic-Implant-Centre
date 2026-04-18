@@ -268,15 +268,22 @@
               </a>
             </div>
           </div>
-          <div class="location-detail">
-            <div class="loc-icon"><i class="fa-solid fa-phone"></i></div>
+          <div class="location-detail phone-contact">
+            <div class="loc-icon loc-phone-icon">
+              <span class="ripple"></span>
+              <span class="ripple ripple-2"></span>
+              <i class="fa-solid fa-phone"></i>
+            </div>
             <div class="loc-text">
               <h4>Phone / WhatsApp</h4>
               <a href="tel:+8801819114508">+880 1819-114508</a>
             </div>
           </div>
-          <div class="location-detail">
-            <div class="loc-icon"><i class="fa-solid fa-envelope"></i></div>
+          <div class="location-detail email-contact">
+            <div class="loc-icon loc-email-icon">
+              <span class="mail-flap"></span>
+              <i class="fa-solid fa-envelope"></i>
+            </div>
             <div class="loc-text">
               <h4>Email</h4>
               <a href="mailto:pacificdental2006@gmail.com">pacificdental2006@gmail.com</a>
@@ -372,12 +379,16 @@
               <i class="fa-solid fa-location-dot"></i>
               <span>Rashid Court (Level# 4, Above LeReVe), House# 04, Road# 07, Sector# 03, Uttara, Dhaka-1230</span>
             </li>
-            <li>
-              <i class="fa-solid fa-phone"></i>
+            <li class="footer-phone-item">
+              <span class="footer-icon-wrap footer-phone-wrap">
+                <i class="fa-solid fa-phone"></i>
+              </span>
               <a href="tel:+8801819114508">+880 1819-114508</a>
             </li>
-            <li>
-              <i class="fa-solid fa-envelope"></i>
+            <li class="footer-email-item">
+              <span class="footer-icon-wrap footer-email-wrap">
+                <i class="fa-solid fa-envelope"></i>
+              </span>
               <a href="mailto:pacificdental2006@gmail.com">pacificdental2006@gmail.com</a>
             </li>
           </ul>
@@ -435,6 +446,25 @@
           </div>
           <span class="field-error" id="phone-error">Please enter a valid phone number.</span>
         </div>
+        <!-- Date & Time row -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="booking-date">Preferred Date <span class="required">*</span></label>
+            <div class="input-wrap">
+              <i class="fa-regular fa-calendar input-icon"></i>
+              <input type="date" id="booking-date" name="booking-date" required />
+            </div>
+            <span class="field-error" id="date-error">Please select a date.</span>
+          </div>
+          <div class="form-group">
+            <label for="booking-time">Preferred Time <span class="required">*</span></label>
+            <div class="input-wrap">
+              <i class="fa-regular fa-clock input-icon"></i>
+              <input type="time" id="booking-time" name="booking-time" required />
+            </div>
+            <span class="field-error" id="time-error">Please select a time.</span>
+          </div>
+        </div>
         <div class="form-group">
           <label for="patient-problem">Describe Your Problem <span class="required">*</span></label>
           <div class="input-wrap textarea-wrap">
@@ -443,13 +473,21 @@
           </div>
           <span class="field-error" id="problem-error">Please describe your problem.</span>
         </div>
+        <!-- Success state (hidden by default) -->
+        <div class="form-success" id="form-success">
+          <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+          <h3>Booking Request Sent!</h3>
+          <p>We've received your appointment request.<br>Our team will contact you shortly to confirm.</p>
+        </div>
         <button type="submit" class="btn-submit" id="submit-booking">
-          <i class="fa-brands fa-whatsapp"></i> Send via WhatsApp
+          <i class="fa-solid fa-paper-plane"></i> Send Booking Request
         </button>
       </form>
     </div>
   </div>
 
+  <!-- EmailJS – automatic email sending, no redirect needed -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <script src="index.js"></script>
 </body>
 </html>
